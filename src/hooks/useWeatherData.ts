@@ -38,7 +38,7 @@ const useWeatherData = (coords:Coord | null):WeatherData => {
     const apiKey:string = "39164433-94ec2e1273f88ab80880706f0";
     const url:string = `https://pixabay.com/api/?key=${apiKey}&q=${weather?.weather[0]?.description}`;
 
-    if (weather?.weather[0]?.description === "moderate rain" || weather?.weather[0]?.description === "light intensity shower rain") {
+    if (weather?.weather[0]?.description === "moderate rain" || weather?.weather[0]?.description === "light intensity shower rain" || weather?.weather[0]?.description === "light intensity drizzle") { 
       setIsLoading(true);
       const newUrl:string = `https://pixabay.com/api/?key=${apiKey}&q=rain`;
       axios.get(newUrl)
