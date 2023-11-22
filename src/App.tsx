@@ -33,6 +33,7 @@ function App() {
         <Loader/>
       ):(
         <div className="max-w-screen-sm w-4/5 flex flex-col justify-center items-center">
+          <h1 className='text-2xl pb-4 hidden'>Weather App</h1>
           <SearchBar
             setInputValue={setInputValue}
           />
